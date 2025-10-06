@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="20037"
+  targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES"
+  initialViewController="QvC-M9-y7g">
+  <dependencies>
+    <deployment identifier="macosx" />
+    <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="20037" />
+  </dependencies>
+  <objects>
+    <customObject id="-2" userLabel="File's Owner" customClass="PreferencesWindowController"
+      customModule="App" customModuleProvider="target" />
+    <customObject id="-1" userLabel="First Responder" customClass="FirstResponder" />
+    <customObject id="-3" userLabel="Application" customClass="NSObject" />
+    <window title="Preferences" allowsToolTipsWhenApplicationIsInactive="NO"
+      autorecalculatesKeyViewLoop="NO" releasedWhenClosed="NO" visibleAtLaunch="NO"
+      animationBehavior="default" id="QvC-M9-y7g">
+      <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES"
+        resizable="YES" />
+      <windowPositionMask key="initialPositionMask" leftStrut="YES" bottomStrut="YES" />
+      <rect key="contentRect" x="196" y="240" width="400" height="300" />
+      <rect key="screenRect" x="0.0" y="0.0" width="1680" height="1027" />
+      <view key="contentView" wantsLayer="YES" id="EiT-Mj-1SZ">
+        <rect key="contentRect" x="0.0" y="0.0" width="400" height="300" />
+        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES" />
+        <subviews>
+          <button verticalHuggingPriority="750" fixedFrame="YES"
+            translatesAutoresizingMaskIntoConstraints="NO" id="9ic-FL-obx">
+            <rect key="frame" x="305" y="12" width="81" height="32" />
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES" />
+            <buttonType>momentaryLight</buttonType>
+            <string key="title">Cancel</string>
+            <connections>
+              <action selector="cancelSettings:" target="-2" id="9ic-FL-obx" />
+            </connections>
+          </button>
+          <button verticalHuggingPriority="750" fixedFrame="YES"
+            translatesAutoresizingMaskIntoConstraints="NO" id="MR4-Bg-9vT">
+            <rect key="frame" x="225" y="12" width="81" height="32" />
+            <autoresizingMask key="autoresizingMask" flexibleMinX="YES" flexibleMaxY="YES" />
+            <buttonType>momentaryLight</buttonType>
+            <string key="title">Save</string>
+            <connections>
+              <action selector="saveSettings:" target="-2" id="MR4-Bg-9vT" />
+            </connections>
+          </button>
+          <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES"
+            translatesAutoresizingMaskIntoConstraints="NO" id="4EN-yA-p0u">
+            <rect key="frame" x="18" y="248" width="364" height="32" />
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES" />
+            <textFieldCell key="cell" lineBreakMode="clipping" title="App Manager Preferences"
+              id="7Hf-2d-3KJ">
+              <font key="font" metaFont="system" size="24" />
+              <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog" />
+              <color key="backgroundColor" name="textBackgroundColor" catalog="System"
+                colorSpace="catalog" />
+            </textFieldCell>
+          </textField>
+          <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="7Hf-2d-3KJ">
+            <rect key="frame" x="18" y="200" width="200" height="18" />
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES" />
+            <buttonType>checkBox</buttonType>
+            <string key="title">Auto-collapse after delay</string>
+            <connections>
+              <outlet property="autoCollapseCheckbox" destination="-2" id="7Hf-2d-3KJ" />
+            </connections>
+          </button>
+          <textField verticalHuggingPriority="750" fixedFrame="YES"
+            translatesAutoresizingMaskIntoConstraints="NO" id="bVn-NM-KNZ">
+            <rect key="frame" x="226" y="195" width="50" height="22" />
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES" />
+            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES"
+              editable="YES" id="7Hf-2d-3KJ">
+              <numberFormatter key="formatter" locale="en_US_POSIX" numberStyle="decimal"
+                minimum="1" maximum="300" id="7Hf-2d-3KJ">
+                <integer key="minimum" value="1" />
+                <integer key="maximum" value="300" />
+              </numberFormatter>
+              <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog" />
+              <color key="backgroundColor" name="controlBackgroundColor" catalog="System"
+                colorSpace="catalog" />
+            </textFieldCell>
+            <connections>
+              <outlet property="autoCollapseDelayField" destination="-2" id="bVn-NM-KNZ" />
+            </connections>
+          </textField>
+          <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES"
+            translatesAutoresizingMaskIntoConstraints="NO" id="DIl-cC-cCs">
+            <rect key="frame" x="284" y="200" width="40" height="17" />
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES" />
+            <textFieldCell key="cell" lineBreakMode="clipping" title="seconds" id="7Hf-2d-3KJ">
+              <font key="font" metaFont="system" size="13" />
+              <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog" />
+              <color key="backgroundColor" name="textBackgroundColor" catalog="System"
+                colorSpace="catalog" />
+            </textFieldCell>
+          </textField>
+          <textField verticalHuggingPriority="750" fixedFrame="YES"
+            translatesAutoresizingMaskIntoConstraints="NO" id="OY7-WF-poV">
+            <rect key="frame" x="18" y="160" width="100" height="22" />
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES" />
+            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES"
+              editable="YES" id="7Hf-2d-3KJ">
+              <numberFormatter key="formatter" locale="en_US_POSIX" numberStyle="decimal"
+                minimum="200" maximum="800" id="7Hf-2d-3KJ">
+                <integer key="minimum" value="200" />
+                <integer key="maximum" value="800" />
+              </numberFormatter>
+              <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog" />
+              <color key="backgroundColor" name="controlBackgroundColor" catalog="System"
+                colorSpace="catalog" />
+            </textFieldCell>
+            <connections>
+              <outlet property="panelWidthField" destination="-2" id="OY7-WF-poV" />
+            </connections>
+          </textField>
+          <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES"
+            translatesAutoresizingMaskIntoConstraints="NO" id="R4o-n2-Eq4">
+            <rect key="frame" x="126" y="165" width="80" height="17" />
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES" />
+            <textFieldCell key="cell" lineBreakMode="clipping" title="Panel width:" id="7Hf-2d-3KJ">
+              <font key="font" metaFont="system" size="13" />
+              <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog" />
+              <color key="backgroundColor" name="textBackgroundColor" catalog="System"
+                colorSpace="catalog" />
+            </textFieldCell>
+          </textField>
+          <button fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eu3-7i-yba">
+            <rect key="frame" x="18" y="120" width="200" height="18" />
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES" />
+            <buttonType>checkBox</buttonType>
+            <string key="title">Show status icon in menu bar</string>
+            <connections>
+              <outlet property="showStatusIconCheckbox" destination="-2" id="eu3-7i-yba" />
+            </connections>
+          </button>
+        </subviews>
+      </view>
+      <connections>
+        <outlet property="delegate" destination="-2" id="eu3-7i-yba" />
+      </connections>
+    </window>
+  </objects>
+</document>
